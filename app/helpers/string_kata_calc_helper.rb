@@ -1,0 +1,2 @@
+module StringKataCalcHelper
+end
