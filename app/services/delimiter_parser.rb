@@ -20,9 +20,11 @@ class DelimiterParser
     end
 
     @num_list = @numbers.split(@delimiter).map(&:to_i)
-    @negatives = @num_list.filter { |num| num.negative? }
-    raise "Negatives not allowed: #{@negatives.join(',')}" && return unless @negatives.empty?
+    @negatives = @num_list.select { |num| num.negative? }
 
-    return @num_list.reject { |num| num > 1000 }.sum
+    return { negatives: @negatives.join(',') } unless @negatives.empty?
+
+    return { negatives: false, result: @num_list.reject { |num| num > 1000 }.sum }
+
   end
 end
