@@ -34,5 +34,23 @@ RSpec.describe StringCalculatorsController, type: :controller  do
         expect(JSON.parse(response.body)["result"]).to eq(2)
       end
     end
+
+    context "with new line as a delimiter" do
+      let!(:params) { {numbers: "\\ \n, 1 \n 1 \n 1"} }
+      it "returns their sum" do
+        post "add", params: params
+        expect(response).to have_http_status(:success)
+        expect(JSON.parse(response.body)["result"]).to eq(1)
+      end
+    end
+
+    context "with a custom delimiter" do
+      let!(:params) { {numbers: "//;\n1;2"} }
+      it "returns their sum" do
+        post "add", params: params
+        expect(response).to have_http_status(:success)
+        expect(JSON.parse(response.body)["result"]).to eq(3)
+      end
+    end
   end
 end
