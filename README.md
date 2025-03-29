@@ -57,3 +57,10 @@ To Calculate Sum of numbers from the input via API here is curl
 
 $ curl -X POST "http://localhost:3000/calculate/sum" -d "numbers=//[***]\n1***2***3"
 
+
+You Can Get the String integer sum via API as well as with the
+DelimiterParser
+
+To Run Specs of the DelimiterParser
+
+$ rspec bundle exec rspec spec/services/delimiter_parser_spec.rb
