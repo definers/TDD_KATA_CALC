@@ -12,13 +12,17 @@ Ignoring numbers greater than 1000.
 
 Throwing an exception for negative numbers.
 Technologies
-Ruby version 3.0.7
-Rails Version 6.1.7.10
+Ruby version: 3.0.7
+Rails Version: 6.1.7.10
 
 Setup
 $ https://github.com/definers/TDD_KATA_CALC.git
 
 $ cd TDD_KATA_CALC
+
+Chckout to Feature Branch from remote
+
+$ git checkout feature/kata_calc_feat
 
 Install Ruby using RVM
 
@@ -41,11 +45,7 @@ To Run Test Cases
 
 $ rails generate rspec:install
 $ rspec spec/controller/string_calculators_spec
-* Ruby version
 
-* System dependencies
-
-* Configuration
 
 * Database creation : N/A
 
