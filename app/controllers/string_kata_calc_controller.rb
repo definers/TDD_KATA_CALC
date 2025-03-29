@@ -1,2 +1,0 @@
-class StringKataCalcController < ApplicationController
-end
