@@ -21,9 +21,6 @@ Rails Version: 6.1.7.10**
 
 **$** cd TDD_KATA_CALC
 
-Chckout to Feature Branch from remote
-
-**$ ** git checkout feature/kata_calc_feat
 
 Install Ruby using RVM
 
